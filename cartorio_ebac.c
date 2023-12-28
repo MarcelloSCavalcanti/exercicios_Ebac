@@ -186,4 +186,4 @@ int main() //Função na qual dá início
 			else
 			printf("senha incorreta!");
 			
-}git 
+}
