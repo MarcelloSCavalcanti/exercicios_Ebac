@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <main>
+        <h1>Formulário de Cadastro</h1>
+        <div id="container">
+            <form action="" id="cadastro">
+                <div class="form-campo">
+                    <label for="cName">Nome completo:</label>
+                <input type="text" id="cName" name="cName" placeholder="Nome sem abreviações" size="100">
+                </div>
+                <div class="form-campo">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email principal" size="100">
+                </div>
+                <div class="form-campo">
+                    <label for="tel">Celular</label>
+                    <input type="tel" id="tel" name="tel" size="100">
+                </div>
+                <div class="form-campo">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" size="100" name="cpf">
+                </div>
+                <div class="form-campo">
+                    <label for="address">Endereço completo</label>
+                    <input type="text" id="address" size="100" name="address" placeholder="Rua/Av. Endereço Principal, S/N, Bloco 3, Apto.1001 - Barra da Tijuca - Rio de Janeiro - RJ">
+                </div>
+                <div class="form-campo">
+                    <label for="addressComplement">Informação adicional endereço</label>
+                    <input type="text" id="addressComplement" placeholder="Exemplo: Em frete á, no km 12 ..." size="100">
+                </div>
+                <div class="form-campo">
+                    <label for="cep">CEP</label>
+                    <input type="text" id="cep" size="100" name="cep">
+                </div>
+            </form>
+            <button type="submit" form="cadastro" value="submit">Enviar</button>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="./js/jquery.mask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/messages_pt_BR.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

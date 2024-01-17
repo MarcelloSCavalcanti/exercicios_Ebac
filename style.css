@@ -1,0 +1,16 @@
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+#container {
+    width: min-content;
+    margin: 25px auto;
+}
+
+.form-campo {
+    margin: 10px 0px ;
+}
