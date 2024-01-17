@@ -14,3 +14,7 @@ h1 {
 .form-campo {
     margin: 10px 0px ;
 }
+
+#cName-error, #email-error, #tel-error, #address-error, #cep-error, #cpf-error  {/*isso é para estilizar a mensagem de error dos elementos*/
+    color: red;
+}

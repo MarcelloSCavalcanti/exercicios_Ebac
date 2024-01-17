@@ -6,12 +6,13 @@ $(document).ready(function() {
         placeholder: "(21) 9 8765-4321"
     })
     $("#cep").mask("00000-000", {
-        placeholder: "00000-000"
+        placeholder: "12345-678"
     })
     $("#cadastro").validate({
         rules: {
             cName: {
                 required: true,
+                minlength:3,
             },
             email: {
                 required: true,
@@ -19,22 +20,23 @@ $(document).ready(function() {
             },
             tel: {
                 required: true,
+                minlength: 16,
             },
             address: {
                 required: true,
+                minlength: 10,
             },
             cep: {
                 required: true,
+                minlength: 8,
             },
             cpf: {
                 required: true,
+                minlength: 14,
             }
         },
         messages: {
-            cName: "Por favor insira seu nome"
-        },
-        submitHandler: function(form) {
-            console.log(form)
+            cName: "Por favor insira seu nome completo!",
         },
         invalidHandler: function(e, validator) {
             let camposIncorretos = validator.numberOfInvalids();
