@@ -1,0 +1,142 @@
+/*mobile first development*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(47, 88, 176);
+  color: #fff;
+}
+
+h1 {
+  font-style: italic;
+}
+
+.container {
+  padding: 0 30px;
+}
+
+#storeName {
+  margin: auto 0px;
+}
+
+.navBar {
+  margin: 20px 0;
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.textNav {
+  text-decoration: none;
+  color: inherit;
+  color: #fff;
+}
+
+#sobre div img {
+  width: 100%;
+  margin: 2em 0 0 0;
+}
+
+h2 {
+  color: rgb(47, 88, 176);
+  font-weight: bold;
+  font-size: 2em;
+  margin-top: 1.5em ;
+}
+
+.underLineSection {
+  width: 100%;
+  height: 2px;
+  background-color: rgb(47, 88, 176);
+  margin: 1em 0 1.5em;
+}
+
+#sobre p {
+  font-size: 1.2em;
+}
+
+#areaProdutos {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.produto img {
+  width: 100%;
+}
+
+.produtoTitulo {
+  font-size: 1.5em;
+  line-height: 1.8em;
+}
+
+.sobreProduto {
+  font-size: 1.2em;
+}
+
+.produtoImg {
+  margin: 15px 0;
+}
+
+.btnCarrinho {
+  width: 100%;
+  font-size: 1.2em;
+  height: 2.4em;
+  background-color: rgb(47, 88, 176);
+  color: #fff;
+  margin: 2em 0;
+  border: none;
+  border-radius: 0.24em;
+}
+
+.btnCarrinho:hover {
+  background-color: rgb(29, 75, 174);
+}
+.btnCarrinho:active {
+  scale: 0.975;
+}
+
+footer {
+  background-color: rgb(47, 88, 176);
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*media size adaptations to tablets*/
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+  .container {
+    padding: 0 60px;
+  }
+  #areaProdutos {
+    grid-template-columns: repeat(2, 47.5%);
+    gap: 5%;
+  }
+
+  .btnCarrinho {
+    margin: 2em 0 1em 0;
+  }
+}
+/*media size adaptations to desktops and tablets on landscape mode*/
+@media screen and (min-width: 1024px), (min-width: 641px) and (max-width: 1023px) and (orientation:landscape){/*last part after de comma if's a tablet at landscope mode*/
+
+  #areaProdutos {
+    grid-template-columns: repeat(4, 23.5%);
+    gap: 2%;
+  }
+
+  .btnCarrinho {
+    margin: 2em 0 1em 0;
+  }
+
+  #sobre {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5%;
+  }
+}
