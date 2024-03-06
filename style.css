@@ -1,0 +1,11 @@
+*{
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.size{
+    height: 400px;
+}
+#info{
+    text-align: center;
+}
