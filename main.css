@@ -87,3 +87,7 @@ body {
     border-radius: 5%;
     max-height: 400px;
 }
+
+#cName-error, #email-error, #tel-error {/*isso é para estilizar a mensagem de error dos elementos*/
+    color: red;
+}
