@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="main.css">
+  <title>Document</title>
+</head>
+<body>
+  <header class="navbar navbar-expand-lg sticky-top p-2" id="cabecalho">
+    <div class="container">
+      <h1 class="navbar-brand m-0 section-title">Planetário</h1>
+      <button class="navbar-toggler m-2" data-bs-toggle="collapse" data-bs-target="#menu-navegacao"><!--aumentei a margem do buttom pois ficava muito colado da lista quando ativado-->
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <nav class="navbar-collapse collapse justify-content-end" id="menu-navegacao">
+        <ul class="nav nav-pills d-block d-md-flex">
+            <li class="nav-item fw-bold">
+              <a href="#sobre-o-planetario" class="nav-link"><!--Caminho para o id de mesmo valor-->
+                <i class="bi bi-globe-americas me-1"></i>
+                  Sobre o Museu
+              </a>
+            </li>
+            <li class="nav-item fw-bold">
+              <a href="#eventos" class="nav-link">
+                <i class="bi bi-calendar-check me-1"></i>
+                  Eventos
+              </a>
+            </li>
+            <li class="nav-item fw-bold">
+              <a href="#nossas-exposicoes" class="nav-link">
+                <i class="bi bi-rocket me-1"></i>
+                  Nossas exposições
+              </a>
+            </li>
+            <li class="nav-item fw-bold">
+              <a href="#fale-conosco" class="nav-link">
+                <i class="bi bi-chat-left-text me-1"></i>
+                  Fale conosco
+              </a>
+            </li>
+          </ul>
+        </nav>
+    </div>
+  </header>
+  <div data-bs-spy="scroll" data-bs-target="cabecalho" data-bs-smooth-scroll="true"><!--espionando a posição do scroll nessa div e atrelando a respota para o header o data-bs-smooth-scroll fez com que o scroll não ultrapasse o titulo das sections e também nâo deixa o menu suspenso ou o header esconda o conteúdo-->
+    <section><!--precisa dessa classe?-->
+      <div class="carousel slide"  data-bs-ride="carousel" id="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active flex-shrink-0" data-bs-interval="3000">
+            <img src="/src/slide1.jpg" class="d-block w-100 h-100"  alt="Espaço"><!--foi necessário o w e h 100 a fim de manter toda a imagem visível, apesar de a imagem ser esmagada não atrapalhou elas visualmente-->
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="/src/slide3.jpg" class="d-block w-100 h-100" alt="Espaço">
+          </div>
+          <div class="carousel-item" data-bs-interval="3000">
+            <img src="/src/slide2.jpeg" class="d-block w-100 h-100" alt="Espaço">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+        <div class="carousel-indicators">
+          <button class="active" type="button" data-bs-target="#carousel" data-bs-slide-to="0"></button>
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+        </div>
+      </div>
+      <div class="py-5 backLiteBlue" id="sobre-o-planetario"><!--A fim de resumir os pb e pt usar o py eixo y = eixo vertical o id está sendo usado para realiar o ativamento do menu quando sobre o conteúdo e também serve de caminho--> 
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6"><!--redimencionado o tamanho da coluna para 50% da largura da tela max 12-->
+              <img src="/src/planetário.jpg" alt="Dentro de um planetário" class="d-block w-100 rounded">
+            </div>
+            <div class="col-md-6 mt-3mt-md-0"> <!--a fim de trazer o titulo mais a cima-->
+              <h1>Sobre o <span class="text-colored section-title">Planetário</span></h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus iure cumque inventore expedita voluptas deleniti error! Possimus ex ad accusamus quam voluptatibus eligendi omnis. Reiciendis veritatis eaque odit labore optio?</p>
+              <h3 >Sobre as <span class="text-colored section-title">apresentações permanentes</span></h3>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis rerum eveniet numquam deserunt doloribus voluptate repellendus, excepturi reiciendis non quae molestias aspernatur culpa reprehenderit enim molestiae vitae, aperiam quas sit!</p>
+              <ul>
+                <li>Item 1</li>
+                <li>Item 1</li>
+                <li>Item 1</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="eventos" class="py-4">
+      <div class="container">
+        <div class="row">
+          <h2 class="text-center m-0"><span class="text-colored section-title">Eventos</span> sob agendamento</h2>
+        </div>
+        <div class="row mt-4">
+          <div class="col-md-4">
+            <img src="/src/palestras.jpeg" alt="Área de lazer" class="d-block w-100 rounded mb-2">
+            <h3 class="text-colored section-title">
+              <i class="bi bi-easel"></i>
+              Palestras
+            </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam minima tempora voluptates fugiat exercitationem unde delectus, doloribus aut repellendus ullam reprehenderit facere molestias magnam laborum. Recusandae dolores culpa repellat quia.</p>
+          </div>
+          <div class="col-md-4">
+            <img src="/src/luneta.jpg" alt="Área de lazer" class="d-block w-100 rounded mb-2">
+            <h3 class="text-colored section-title">
+              <i class="bi bi-book"></i>
+              Observações e pesquisas
+            </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam minima tempora voluptates fugiat exercitationem unde delectus, doloribus aut repellendus ullam reprehenderit facere molestias magnam laborum. Recusandae dolores culpa repellat quia.</p>
+          </div>
+          <div class="col-md-4">
+            <img src="/src/crianças.jpeg" alt="Área de lazer" class="d-block w-100 rounded mb-2">
+            <h3 class="text-colored section-title">
+              <i class="bi bi-bus-front"></i>
+              Excursões
+            </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam minima tempora voluptates fugiat exercitationem unde delectus, doloribus aut repellendus ullam reprehenderit facere molestias magnam laborum. Recusandae dolores culpa repellat quia.</p>
+          </div>
+        </div>
+      </div>  
+    </section>
+    <section id="nossas-exposicoes" class="backLiteBlue">
+      <div class="container py-5">
+        <div class="row">
+          <h2 class="text-center pb-5">
+            Nossas <span class="section-title text-colored">exposições</span>
+          </h2>
+        </div>
+        <div class="row">
+          <aside class="col-md-3">
+            <nav class="nav nav-pills flex-column expo">
+              <button type="button" data-bs-toggle="tab" data-bs-target="#tec" class="fw-bold text-start nav-link my-1 active">Evolução tecnológica</button>
+              <button type="button" data-bs-toggle="tab" data-bs-target="#aero" class="fw-bold text-start nav-link my-1 ">Primórdios da aerodinâmica</button>
+              <button type="button" data-bs-toggle="tab" data-bs-target="#rocket" class="fw-bold text-start nav-link my-1 ">Primeiras tentativas e a gerra fria</button>
+              <button type="button" data-bs-toggle="tab" data-bs-target="#today" class="fw-bold text-start nav-link my-1 ">Passos atuais</button>
+            </nav>
+          </aside>
+          <div class="col-md-9">
+            <div class="tab-content">
+              <div class="tab-pane active" id="tec">
+                <div class="row">
+                    <img src="/src/tec.jpg" alt="robot" class="d-block col-md-7 expo-img">
+                    <div class="col-md-5">
+                    <p class="section-title text-colored pt-4">Equipamentos tecnológicos</p>
+                    <p class="m-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis velit tempore ipsam. Soluta doloremque perferendis sapiente totam laborum facere et accusantium minus, magni dolores earum fugiat, placeat dignissimos ullam! Aliquid.</p>
+                    <p class="section-title text-colored pt-4">Sub info title</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, magni assumenda. Fugit reiciendis dolor ipsa eius similique veritatis vero, aut in. Similique illum id itaque eaque dolorem porro nesciunt ducimus!</p>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="aero">
+                <div class="row">
+                    <img src="/src/aerodinamica.jpeg" alt="aerodynamics" class="d-block col-md-7 expo-img">
+                    <div class="col-md-5">
+                      <p class="section-title text-colored pt-4">Aerodinâmica</p>
+                      <p class="m-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis velit tempore ipsam. Soluta doloremque perferendis sapiente totam laborum facere et accusantium minus, magni dolores earum fugiat, placeat dignissimos ullam! Aliquid.</p>
+                      <p class="section-title text-colored pt-4">Sub info title</p>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, magni assumenda. Fugit reiciendis dolor ipsa eius similique veritatis vero, aut in. Similique illum id itaque eaque dolorem porro nesciunt ducimus!</p>
+                    </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="rocket">
+                <div class="row">
+                    <img src="/src/rocket.jpg" alt="Rocket" class="d-block col-md-7 expo-img">
+                    <div class="col-md-5">
+                    <p class="section-title text-colored pt-4">Foguetes</p>
+                    <p class="m-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis velit tempore ipsam. Soluta doloremque perferendis sapiente totam laborum facere et accusantium minus, magni dolores earum fugiat, placeat dignissimos ullam! Aliquid.</p>
+                    <p class="section-title text-colored pt-4">Sub info title</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, magni assumenda. Fugit reiciendis dolor ipsa eius similique veritatis vero, aut in. Similique illum id itaque eaque dolorem porro nesciunt ducimus!</p>
+                    </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="today">
+                <div class="row">
+                    <img src="/src/today.jpg" alt="Estação espacial" class="d-block col-md-7 expo-img">
+                    <div class="col-md-5">
+                    <p class="section-title text-colored pt-4">Estações espaciais</p>
+                    <p class="m-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis velit tempore ipsam. Soluta doloremque perferendis sapiente totam laborum facere et accusantium minus, magni dolores earum fugiat, placeat dignissimos ullam! Aliquid.</p>
+                    <p class="section-title text-colored pt-4">Sub info title</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, magni assumenda. Fugit reiciendis dolor ipsa eius similique veritatis vero, aut in. Similique illum id itaque eaque dolorem porro nesciunt ducimus!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="fale-conosco" class="py-5">
+      <div class="container">
+        <div class="row">
+          <h2 class="section-title text-center">Fale <span class="text-colored">conosco</span></h2>
+        </div>
+        <div class="row">
+          <div class="col-md-7">
+            <form>
+              <div class="mb-3">
+                <label for="nome" class="form-label fw-fold text-colored">Seu nome: </label>
+                <input type="text" id="nome" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label fw-fold text-colored">Seu email: </label>
+                <input type="email" id="email" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="telefone" class="form-label fw-fold text-colored">Seu telefone (opcional): </label>
+                <input type="tel" id="telefone" class="form-control">
+              </div>
+              <div class="mb-3">
+                <label for="mensagem" class="form-label fw-fold text-colored">Seu mensagem: </label>
+                <textarea id="mensagem" class="form-control" required></textarea>
+              </div>
+              <button type="submit" class="btn fw-bold mb-2">Enviar</button>
+            </form>
+          </div>
+          <div class="col-md-5">
+            <div class="row">
+              <h3 class="section-title fs-4 text-colored">
+                <i class="bi bi-hand-thumbs-up-fill"></i>
+                Redes sociais:
+              </h3>
+              <ul class="social-links">
+                <li class="fs-5">
+                  <a href="#">
+                    <i class="bi bi-linkedin text-colored"></i>
+                  </a>
+                </li>
+                <li class="fs-5 ms-1">
+                  <a href="#">
+                    <i class="bi bi-github text-colored"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="row mt-4">
+              <h3 class="section-title fs-4 text-colored">
+                <i class="bi bi-cursor-fill"></i>
+                Endereço:
+              </h3>
+              <p>Rua Louveira 1223, Bairro Cdn - Flamengo - RJ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</html>

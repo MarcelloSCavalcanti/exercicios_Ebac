@@ -1,0 +1,89 @@
+body {
+    font-family: Roboto, sans-serif;
+}
+
+.navbar {
+    background-color: rgb(5, 5, 116);
+}
+
+#cabecalho .nav .nav-link.active {
+    background-color: #fff;
+    color: rgb(5, 5, 116);
+}
+
+#cabecalho .nav .nav-link,
+.navbar-brand,
+.navbar-brand:hover {
+    color: #fff;
+}
+
+.navbar-toggler {
+    background-color: rgb(199, 230, 241);
+}
+
+.carousel-item {
+    align-items: center;
+    height: 600px;
+}
+/*Para evidenciar locais com fundo diferente*/
+.backLiteBlue {
+    background-color: rgb(199, 230, 241);
+}
+
+.section-title {
+    font-family: Pacifico, cursive;
+}
+
+.text-colored {
+    color: rgb(5, 5, 116);
+}
+
+.expo .nav-link {
+    color: rgb(5, 5, 116);;
+}
+
+.expo .nav-link.active,
+#fale-conosco button{/*precisa de espaço entre a class principal e as outras*/
+    background-color: rgb(5, 5, 116);
+    color: rgb(199, 230, 241);
+}
+
+#fale-conosco button:hover {
+    scale: 0.95;
+}
+
+.expo .nav-link.active:hover {/*assim quando sobre não iremos alterar a cor se esse elemento estiver ativo*/
+    color: rgb(199, 230, 241);
+}
+
+.expo .nav-link:hover {
+    color: #65018c;
+}
+
+.social-links li {
+    list-style: none;
+    display: inline; /*alinha os icones*/
+}
+
+.social-links a {
+    text-decoration: none;/*para remover o underline padrão de link dos icones*/
+}
+
+/*responsivity settings*/
+
+@media (max-width: 767px) {
+    .carousel-item img {
+        height: 280px;
+    }
+}
+
+@media (min-width: 767px) {
+    .carousel-item img {
+        height: 600px;
+    }
+}
+
+.expo-img {
+    border-radius: 5%;
+    max-height: 400px;
+}
