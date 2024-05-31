@@ -1,8 +1,8 @@
 @use '../config/reset';
-@use '../config/variables';
+@use '../config/variables' as v;
 
 header {
-  background-color: variables.$corPrimaria;
+  background-color: v.$corPrimaria;
   position: sticky;
   top: 0;
   left: 0;
@@ -15,7 +15,7 @@ header {
     font-weight: bold;
     margin-left: 24px;
     a {
-      color: variables.$corWhite;
+      color: v.$corWhite;
       text-decoration: none;
     }
   }
