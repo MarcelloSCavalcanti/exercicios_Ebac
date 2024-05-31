@@ -1,0 +1,49 @@
+@use '../config/variables' as v;//a fim de escrever menos caso o nome seja grande
+//para a function funcionar precisamos desse módulo
+@use 'sass:math';
+
+
+@function pixelParaEm($salvoEmPixel, $contextoEmPixel: 16px) {
+    @return math.div($salvoEmPixel, $contextoEmPixel) + em;
+}
+
+//para reduzir códigos repetitivos. Não podem ser importadas para outros arquivos
+@mixin display_padding($display, $padding) {
+    display:$display;
+    padding:$padding;
+}
+
+//add aqui por motivo de treinamento
+header .container {
+    @include display_padding(flex, 16px 0);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.products {
+    margin-top: pixelParaEm(40px);
+    display: grid;
+    grid-template-columns: repeat(3, 32.66%);
+    column-gap: 1%;
+    row-gap: 4%;
+    width: 100%;
+}
+
+.product-item img {
+    width: 100%;
+    border-radius: 8px;//pixelParaEm(8px)
+}
+
+.product-button {
+    @include display_padding(block, pixelParaEm(20px) 0);//alterei para 20px pois ficava muito grande
+    background-color: v.$corSecundaria;
+    color: v.$corWhite;
+    text-align: center;
+    border-radius: pixelParaEm(40px);
+    margin-top: pixelParaEm(40px);
+    text-decoration: none;
+}
+
+.product-button:hover {
+    background-color: lighten(v.$corSecundaria, 5%);
+}

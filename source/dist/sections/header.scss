@@ -1,0 +1,22 @@
+@use '../config/reset';
+@use '../config/variables';
+
+header {
+  background-color: variables.$corPrimaria;
+  position: sticky;
+  top: 0;
+  left: 0;
+  // não consegui treinar essa função porém deixei ela no código para fim de consulta posterior height: calc(100vh - 106px);
+}
+
+.menu {
+  display: flex;
+  li {
+    font-weight: bold;
+    margin-left: 24px;
+    a {
+      color: variables.$corWhite;
+      text-decoration: none;
+    }
+  }
+}
