@@ -1,0 +1,105 @@
+@import "variables.less";
+@import "maps.less";
+@import "escaping.less";
+@import "mixins.less";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  background-color: @corDeFundoBody;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1024px;
+  .width100();
+  margin: 0 auto;
+}
+
+header {
+  background-color: @corDeFundoHeader;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+header .container {
+  .displayPadding(flex, 16px 0);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  font-weight: bold;
+  margin-left: #size[medium];
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+section {
+  padding: 56px 0;
+}
+
+.products {//com o uso do & chamamos o nome da classe pai para todos os locais do &
+  margin-top: #size[xlarge];
+  display: grid;
+  grid-template-columns: repeat(3, 32.66%);
+  column-gap: 1%;
+  row-gap: 4%;
+  .width100();
+
+  &-item img {
+    .width100();
+    border-radius: #size[small];
+  }
+  
+  &-button {
+    .displayPadding(block, 8px 0);//mixins com argumentos
+    background-color: @corDeFundoButton;
+    color: #fff;
+    text-align: center;
+    border-radius: #size[xsmall];
+    margin-top: #size[xsmall];
+    text-decoration: none;
+  }
+  
+  &-button:hover {
+    background-color: @corDeFundoBtnHover;
+  }
+}
+
+@media @breakpointTablet {
+  .container {
+    max-width: 80%;
+  }
+
+  .products {
+    grid-template-columns: repeat(2, 48.5%);
+    column-gap: 3%;
+  }
+}
+
+@media @breakpointMobile {
+  .products {
+    display: block;
+    &-item  {
+      margin-bottom: #size[large];
+    }
+  }
+
+}
